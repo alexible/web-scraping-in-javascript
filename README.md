@@ -9,3 +9,7 @@ npm install
 ```
 npm start
 ```
+### Development server:
+```
+npm run dev
+```
