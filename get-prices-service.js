@@ -1,11 +1,12 @@
-// fuel
 const request = require("request-promise");
 const cheerio = require("cheerio");
 
-async function getPriceData() {
+const getPriceData = async () => {
+    
     const result = await request.get(
         "https://www.roadrangerusa.com/fuel/check-fuel-prices"
     );
+
     const $ = cheerio.default.load(result);
     const scrapedRows = [];
     $("table tr").each((index, element) => {
@@ -17,7 +18,7 @@ async function getPriceData() {
         const scrapedRow = { location, price }; 
         scrapedRows.push(scrapedRow); 
     });
-    console.log(scrapedRows);
-
+    
+    return scrapedRows;
 }
-getPriceData();
+module.exports = getPriceData
