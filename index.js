@@ -11,9 +11,9 @@ async function getPriceData() {
     $("table tr").each((index, element) => {
         if (index === 0) return true;
         const th = $(element).find("th");
-        const location = th.text()
-        const td = $(element).find("td").last();
-        const price = td.text()
+        const location = th.text();
+        const td = $(element).find("td");
+        const price = $(td[3]).text();
         const scrapedRow = { location, price }; 
         scrapedRows.push(scrapedRow); 
     });
