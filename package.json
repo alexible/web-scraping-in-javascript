@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js | open http://localhost:3000",
-    "test": "jest --watch"
+    "test": "jest --all"
   },
   "keywords": [],
   "author": "",
