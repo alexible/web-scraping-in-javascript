@@ -13,3 +13,7 @@ npm start
 ```
 npm run dev
 ```
+### API tests:
+```
+npm test
+```
